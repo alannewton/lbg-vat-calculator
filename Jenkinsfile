@@ -35,5 +35,11 @@ pipeline {
                 }
             }
         }
+
+        stage ('Invoke Docker pipeline') {
+            steps {
+                build job: 'react-docker'
+            }
+        }
     }
 }
